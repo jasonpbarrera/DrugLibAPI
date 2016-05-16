@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrugLibAPI", "DrugLibAPI\DrugLibAPI.csproj", "{874A1E32-546C-4493-ACB2-E90B60FD42AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrugDataAPIClientTest", "DrugDataAPIClientTest\DrugDataAPIClientTest.csproj", "{21427B20-52EC-46C4-A13D-0F4659662AC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestApiClient", "RestApiClient\RestApiClient.csproj", "{35CF5578-0DD0-402D-8F61-91AEC54B88B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{874A1E32-546C-4493-ACB2-E90B60FD42AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{874A1E32-546C-4493-ACB2-E90B60FD42AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{874A1E32-546C-4493-ACB2-E90B60FD42AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{874A1E32-546C-4493-ACB2-E90B60FD42AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21427B20-52EC-46C4-A13D-0F4659662AC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21427B20-52EC-46C4-A13D-0F4659662AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21427B20-52EC-46C4-A13D-0F4659662AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21427B20-52EC-46C4-A13D-0F4659662AC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35CF5578-0DD0-402D-8F61-91AEC54B88B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35CF5578-0DD0-402D-8F61-91AEC54B88B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35CF5578-0DD0-402D-8F61-91AEC54B88B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35CF5578-0DD0-402D-8F61-91AEC54B88B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
