@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -42,21 +46,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DailyMedClient.cs">
+      <DependentUpon>DrugApiClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InteractionsClient.cs">
+      <DependentUpon>DrugApiClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RESTModels\DailyMed\DrugNames.cs" />
+    <Compile Include="RESTModels\DailyMed\NDCs.cs" />
+    <Compile Include="RESTModels\Interactions\Interactions.cs" />
+    <Compile Include="RESTModels\Interactions\InteractionsList.cs" />
     <Compile Include="RESTModels\RxClasses\GetAllClasses.cs" />
     <Compile Include="RESTModels\RxClasses\GetClassByRxcui.cs" />
     <Compile Include="RESTModels\RxNorm\GetNdcProperties.cs" />
-    <Compile Include="RESTModels\RxNorm\GetNdcSTatus.cs" />
+    <Compile Include="RESTModels\RxNorm\NdcStatus.cs" />
+    <Compile Include="RESTModels\RxTerms\ConceptGroup.cs" />
     <Compile Include="RESTModels\RxTerms\minConcept.cs" />
     <Compile Include="RESTModels\RxTerms\DisplayGroup.cs" />
     <Compile Include="RESTModels\RxTerms\RxtermsProperties.cs" />
     <Compile Include="RESTModels\RxTerms\RxTermsVersion.cs" />
+    <Compile Include="DrugApiClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RestApiClient\RestApiClient.csproj">
+      <Project>{35cf5578-0dd0-402d-8f61-91aec54b88b6}</Project>
+      <Name>RestApiClient</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

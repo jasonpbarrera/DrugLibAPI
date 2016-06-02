@@ -33,8 +33,35 @@ namespace RestApiClient
         public TJsonModel Deserialize<TJsonModel>(JsonResponse response)
             where TJsonModel : class, new()
         {
-            return Newtonsoft.Json.JsonConvert
-                .DeserializeObject<TJsonModel>(response.ResponseBody);
+
+            try
+            {
+                var settings = new Newtonsoft.Json.JsonSerializerSettings
+                {
+
+                };
+
+                var model = Newtonsoft.Json.JsonConvert
+                    .DeserializeObject<TJsonModel>(response.ResponseBody, settings);
+
+                return model;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+
+                var e = ex;
+                if (e.InnerException != null)
+                {
+                    do
+                    {
+                        e = e.InnerException;
+                        Console.WriteLine(ex.Message);
+
+                    } while (e.InnerException != null);
+                }
+                throw ex;
+            }
         }
 
         public JsonResponse Execute<TJsonModel>(JsonRequest request, out TJsonModel model)
@@ -91,6 +118,7 @@ namespace RestApiClient
             }
 
             var response = await responseTask;
+            response.EnsureSuccessStatusCode();
             return new JsonResponse
             {
                 AsyncToken = cancelToken,

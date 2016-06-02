@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace DrugLibAPI.RESTModels.RxTerms
 {
-    public class minConcept
+    public class MinimumConcept
     {
-        public string fullName { get; set; }
-        public string termType { get; set; }
-        public string rxcui { get; set; }
+        public string FullName { get; set; }
+        public string TermType { get; set; }
+        public string RxCUI { get; set; }
 
     }
 }
